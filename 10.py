@@ -1,9 +1,9 @@
 import core
 start = core.time()
 
-ubound = input ('Find primes up to: ')
+print "Finding the sum of all primes between 0 and 2.000.000"
 
-list = core.primelist(range(0, ubound))
+list = core.primelist(range(0, 2000000))
 
 hold = 0
 
