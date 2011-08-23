@@ -4,6 +4,7 @@ working on these with ( possibly against ) Furden to see who is the superior mat
 
 Also - blueberry scones.
 
-** SOLVED PROBLEMS (ALL TIME IS IN SECONDS) **
-10. Elapsed time: 25.3259310722 seconds
+* SOLVED PROBLEMS (ALL TIME IS IN SECONDS) 
+
+*    Elapsed time: 25.3259310722 seconds
 
