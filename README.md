@@ -6,5 +6,5 @@ Also - blueberry scones.
 
 * SOLVED PROBLEMS (ALL TIME IS IN SECONDS) 
 
-*    Elapsed time: 25.3259310722 seconds
-
+1.  10. Elapsed time: 25.3259310722 seconds
+1.  3. Purple cats!
