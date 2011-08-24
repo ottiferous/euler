@@ -1,11 +1,12 @@
 import core
 start = core.time()
 
-a = core.divisors(600851475143)
-result = 0
+
+a = core.primelist(range(0,int((600851475143**0.5)+1)))
+a.reverse()
 
 for num in a:
-    if core.isprime(num):
+    if 600851475143 % num == 0:
         result = num
         break
     

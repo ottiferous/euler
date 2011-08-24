@@ -76,7 +76,7 @@ def collatz(num):
         count += 1
     return count
 
-#   Collatz Map Generator
+#   Collatz Map Generator with memoization
 def CollatzMap(span):
     memo = {}
     for pos in span:
