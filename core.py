@@ -45,11 +45,20 @@ def numofdivs(n):
             else: count += 1
     return count
 
+#   Returns a list of divisors for a given number
+def divisors(num):
+    divlist = []
+    for x in xrange(2, int(num**0.5)+1):
+        if ((num % x) == 0):
+            divlist.append(x)
+            divlist.append(int(num/x))
+    return list(set(divlist))
+
 #   Recursive Prime Generator (R.P.G.)
 def RPG(start = 2):
     pos = start
     while True:
-        if num_divisors(pos) == 2:
+        if numofdivs(pos) == 2:
             yield pos
         pos += 1
 
