@@ -8,5 +8,7 @@ Solved Problems Runtime
 - *5*   Elapsed time: *0.00371193885803*
 - *6*   Elapsed time: *0.000802040100098*
 - *7*   Elapsed time: *0.780074119568*
+- *8*   Elapsed time: *0.0123820304871*
+- *9*   Elapsed time: *14.6775939465*
 - *10*  Elapsed time: *25.3259310722*
 

@@ -1,3 +1,5 @@
+from time import time
+start = time()
 a, b, c = 3,4,5
 for a in range(3,500):
 	for b in range(a+1,500):
@@ -12,3 +14,4 @@ for a in range(3,500):
 	#		break
 	#if a+b+c == 1000:
 	#	break
+print "Elapsed time: " + str(time() - start)
