@@ -1,18 +1,12 @@
-def ispalindrome(num):
-	a = str(num)
+import core
 
-	if (a == a[::-1]):
-		return True
-	return False
-
-#	get list of all possible 6 digit palindromes
-
+start = core.time()
 count = 999*999
 plist = []
 
 while count > 100000:
 
-	if(ispalindrome(count)):
+	if(core.ispalindrome(str(count))):
 		plist.append(count)
 	count -= 1
 
@@ -20,13 +14,11 @@ llist = range (110, 999, 11)
 
 for i in plist:
 	
-	for x in llist:
-		if ((i % x) == 0) and (len(str(i/x))==3):
+    for x in llist:
+        if ((i % x) == 0) and (len(str(i/x))==3):
 			print "Solution set (" + str(x) + "," + str(i/x) + ") for " + str(i)
 			break	
 	
-		if ((i % x) == 0) and (len(str(i/x))==3):
-			break
-
-		print "checking factors of: " +str(i)
-
+    if ((i % x) == 0) and (len(str(i/x))==3):
+        break
+print "Elapsed time: " + str(core.time() - start)

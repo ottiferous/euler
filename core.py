@@ -48,12 +48,12 @@ def numofdivs(n):
 #   Returns a list of divisors for a given number
 def divisors(num):
     divlist = [1]
-    for x in xrange(2, int(num*0.5)+1):
+    for x in xrange(2, int(num**0.5)+1):
         if ((num % x) == 0):
             divlist.append(int(x))
             divlist.append(int(num/x))
-    divlist.append(num)
 
+    divlist.append(num)
     result = list(set(divlist))
     result.sort()
     return result
@@ -109,3 +109,10 @@ def fib():
     while True:
         yield a
         a, b = b, a+b
+
+#   Checks if a supplied string is a palindrome
+def ispalindrome(arg):
+    
+    if arg == arg[::-1]:
+            return True
+    else: return False
