@@ -7,5 +7,6 @@ Solved Problems Runtime
 - *4*   Elapsed time: *2.12472105026*
 - *5*   Elapsed time: *0.00371193885803*
 - *6*   Elapsed time: *0.000802040100098*
+- *7*   Elapsed time: *0.780074119568*
 - *10*  Elapsed time: *25.3259310722*
 
