@@ -5,5 +5,6 @@ Solved Problems Runtime
 - *2*   Elapsed time: *0.000242948532104*
 - *3*   Elapsed time: *0.157624959946*
 - *4*   Elapsed time: *2.12472105026*
+- *5*   Elapsed time: *0.00371193885803*
 - *10*  Elapsed time: *25.3259310722*
 

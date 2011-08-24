@@ -1,5 +1,7 @@
 from math import factorial
+from time import time
 
+start = time()
 seed = 19*17*13*11
 test = factorial(20)
 count = 1
@@ -26,5 +28,4 @@ while seed < test:
 			print "Result is: " + str(seed*count)
 			break
 	count += 1
-	if (count % 1000) == 0:
-		print str(count) + "multiples tried."
+print "Elapsed time: " + str(time() - start)
