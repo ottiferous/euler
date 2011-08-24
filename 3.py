@@ -2,8 +2,6 @@ import core
 start = core.time()
 
 a = core.divisors(600851475143)
-a.sort()
-a.reverse()
 result = 0
 
 for num in a:

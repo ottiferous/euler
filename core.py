@@ -47,12 +47,16 @@ def numofdivs(n):
 
 #   Returns a list of divisors for a given number
 def divisors(num):
-    divlist = []
-    for x in xrange(2, int(num**0.5)+1):
+    divlist = [1]
+    for x in xrange(2, int(num*0.5)+1):
         if ((num % x) == 0):
-            divlist.append(x)
+            divlist.append(int(x))
             divlist.append(int(num/x))
-    return list(set(divlist))
+    divlist.append(num)
+
+    result = list(set(divlist))
+    result.sort()
+    return result
 
 #   Recursive Prime Generator (R.P.G.)
 def RPG(start = 2):
