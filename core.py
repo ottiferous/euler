@@ -116,3 +116,6 @@ def ispalindrome(arg):
     if arg == arg[::-1]:
             return True
     else: return False
+
+#   Grid traversing functions
+

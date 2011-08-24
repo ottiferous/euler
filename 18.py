@@ -4,7 +4,7 @@ import time
 def getpyramid():
     biglist = "" 
 
-    for line in open ('euler18list', 'r'):
+    for line in open ('18list', 'r'):
         biglist += line
 
     a = biglist.split()

@@ -25,4 +25,4 @@ while True:
 		answer = num
 		break;
 print "Answer is: " + str(answer)
-print "Elapsed time: " + str((time.time() - start)) + " seconds"
+print "Elapsed time: " + str((time.time() - start))

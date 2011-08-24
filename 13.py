@@ -2,10 +2,10 @@ import time
 start = time.time()
 biglist = 0
 
-for line in open ('euler13list', 'r') :
+for line in open ('13list', 'r') :
 	biglist += int(line)
 
 a = str(biglist)
 
 print "Solution is: " + a[:10]
-print "In " + str(time.time() - start) + " seconds."
+print "Elapsed time:" + str(time.time() - start)

@@ -33,8 +33,5 @@ for pos in xrange(2, limit):
         count = num 
         result = pos
 
-    if ( pos % 100000 ) == 0:
-        print "Finished " + str(pos) + " numbers"
-
 print "Highest count is: " + str(count) + " for number: " + str(result)
-print "In " + str(time.time()-start) + " seconds"
+print "Elapsed time: " + str(time.time()-start)

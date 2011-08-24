@@ -1,3 +1,5 @@
+from time import time
+start = time()
 def get_points(pos):
 	
 #	from a given position in array find the graphically adjacent items 
@@ -67,25 +69,6 @@ while x < len(old_grid):
 
 x = hold = check = 0
 
-q = ""
-
-while q >= 0:
-	q = input('Check position: ')
-	q = int(q)
-
-	rule = get_points(q)
-
-	print rule
-
-	print "\t" + "up: " + str(get_up(q))
-	print "\t" + "ur: " + str(get_ur(q))
-	print "\t" + "rt: " + str(get_rt(q))
-	print "\t" + "br: " + str(get_br(q))
-	print "\t" + "dn: " + str(get_dn(q))
-	print "\t" + "bl: " + str(get_bl(q))
-	print "\t" + "lt: " + str(get_lt(q))
-	print "\t" + "ul: " + str(get_ul(q))
-
 for _ in range(0,400):
 	
 	rule = get_points(x)
@@ -94,44 +77,36 @@ for _ in range(0,400):
 		check = grid[_]*grid[(_-20)]*grid[(_-40)]*grid[(_-60)]	
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[1] == True:
 		check = grid[_]*grid[(_-19)]*grid[(_-38)]*grid[(_-57)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[2] == True:
 		check = grid[_]*grid[(_+1)]*grid[(_+2)]*grid[(_+3)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[3] == True:
 		check = grid[_]*grid[(_+21)]*grid[(_+42)]*grid[(_+63)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[4] == True:
 		check = grid[_]*grid[(_+20)]*grid[(_+40)]*grid[(_+60)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[5] == True:
 		check = grid[_]*grid[(_+19)]*grid[(_+38)]*grid[(_+57)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[6] == True:
 		check = grid[_]*grid[(_-1)]*grid[(_-2)]*grid[(_-3)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 	if rule[7] == True:
 		check = grid[_]*grid[(_-21)]*grid[(_-42)]*grid[(_-63)]
 		if check > hold:
 			hold = check	
-	print str(check) + ",",
 
-	print " -- " + str(x) 
 	x += 1
 
 print "Highest value was: " + str(hold)
+print "Elapsed time: " + str(time() - start)
