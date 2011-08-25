@@ -3,7 +3,7 @@ Solved Problems Runtime
 
 Times listed for individual programs are in **milliseconds**, while **Totals are in seconds**.
 
-Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
+### Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
 
 =========================
 
