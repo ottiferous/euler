@@ -6,16 +6,16 @@ Times listed for individual programs are in **milliseconds**, while **Totals are
 Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
 =========================
 
-- *1*   Elapsed time: *0.000356912612915*
-- *2*   Elapsed time: *0.000242948532104*
-- *3*   Elapsed time: *0.157624959946*
-- *4*   Elapsed time: *2.12472105026*
-- *5*   Elapsed time: *0.00371193885803*
-- *6*   Elapsed time: *0.000802040100098*
-- *7*   Elapsed time: *0.780074119568*
-- *8*   Elapsed time: *0.0123820304871*
-- *9*   Elapsed time: *14.6775939465*
-- *10*  Elapsed time: *25.3259310722*
+- *1*   Elapsed time: *356912612915*
+- *2*   Elapsed time: *242948532104*
+- *3*   Elapsed time: *157.624959946*
+- *4*   Elapsed time: *2124.72105026*
+- *5*   Elapsed time: *3.71193885803*
+- *6*   Elapsed time: *0.802040100098*
+- *7*   Elapsed time: *780.074119568*
+- *8*   Elapsed time: *12.3820304871*
+- *9*   Elapsed time: *14677.5939465*
+- *10*  Elapsed time: *25325.9310722*
 
 **TOTAL** 43.083 _seconds_
 =========================
