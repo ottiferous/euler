@@ -1,49 +1,35 @@
 import time
 
-#   Gets pyramid from file and retuns linear array
-def getpyramid():
-    biglist = "" 
+#   Gets pyramid from file and retuns list of each row
+def getpyramid(name):
 
-    for line in open ('18list', 'r'):
-        biglist += line
+    biglist = [] 
+    f = open(name, 'r')
+    for line in f.read().split('\n'):
+        biglist.append(line)
+    f.close()
+    del [len(biglist)-1]
 
-    a = biglist.split()
+    return biglist
 
-    count = 0
-    list = []
-    for num in a:
-        list.append(int(num))
-        count += 1
-
-    return list
-
-#   returns the number of rows starting
-#   at one in a pyramid of arbitrary size
-def pyramidrows(num):
-    row = 0
-    while row != num:
-        num -= row
-        row += 1 
-    return row
-
-#   find first element in array for Nth row
-def getrow(n):
-    count = 0
-    for _ in xrange(n):
-        count += _
-    return count
-
-#   sum row of node paths
-def rowsums(row):
-    mod_row = []
-    for x in row:
-        mod_row[x]
+#   Takes an array of characters to sum
+#       returns a list of ints for that row
+def sum(row):
     
-    
-#   sum the paths immediately below a node
-def pathsum(node):
-    return
+    result = []
+    for _ in xrange(len(row)-1):
+        result.append(int(row[_])+int(row[_+1]))
 
-start = time.time()
-pyramid = getpyramid()
-size = pyramidrows
+    return result
+
+#   sum values of row returning values to be
+#       added to the row above in a 1:1 ratio
+def makepaths(tri):
+
+#   Need to start at the 'bottom' and work our way up
+   tri.reverse()
+   new = []
+
+   for row in tri:
+       new.append(sum(row))
+
