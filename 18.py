@@ -8,7 +8,7 @@ def getpyramid(name):
     for line in f.read().split('\n'):
         biglist.append(line)
     f.close()
-    del [len(biglist)-1]
+    del biglist[-1]
 
     return biglist
 
@@ -18,7 +18,7 @@ def sum(row):
     
     result = []
     for _ in xrange(len(row)-1):
-        result.append(int(row[_])+int(row[_+1]))
+        result.append((int(row[_])+int(row[_+1])))
 
     return result
 
