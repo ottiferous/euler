@@ -4,7 +4,7 @@
 
 #   Test Variables for loading into python repl
 
-list = [[10], [11, 12], [13, 14, 15], [16, 17, 18, 19]]
+list = [[10], [11, 12], [20, 14, 12], [16, 17, 25, 14]]
 
 #   Sum the numbers in pairs
 def sumrow(row):
@@ -25,7 +25,7 @@ def getpyramid():
 
     for line in f.read().split('\n'):
         b = []
-        for x in line:
+        for x in line.split():
             b.append(int(x))
         biglist.append(b)
 
@@ -40,10 +40,9 @@ def getpyramid():
 #       and finds the total score
 def score(list):
    
-    list.reverse()
-
     total = 0
     for row in list[:1]:
+        print row
         total += max(sumrow(row))
     total += max(list[0])
 
