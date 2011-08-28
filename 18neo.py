@@ -29,4 +29,4 @@ def max_path():
         for x in range(len(triangle[row])-1):            
             max_list = triangle[row][x] + max(triangle[row][x], triangle[row][x+1]) # goes out of range?
 
-    return max_list
+    return max_lis
