@@ -1,3 +1,4 @@
+#   Load the pyramid from a text file
 def get_pyramid(filename):
     
     string_list = ""
@@ -9,24 +10,48 @@ def get_pyramid(filename):
     return [[int(x) for x in row.split()] \
         for row in string_list]
 
-def max_path():
-    triangle = get_pyramid('18list')
+#   Sum the numbers in pairs
+def sumrow(row):
 
-    max_list = []
-    max_list.append(triangle[0])
+    if(len(row) == 1): return row
+
+    result = []
+    for x in range(len(row)-1):
+        result.append(row[x] + row[x+1])
+    return result
+
+# Make the summation triangle
+#   gets an upside-down pyramid
+def sum_pyramid(origin):
+    
+    new = []
 
 #
-#   Something in this code block causes it to go out of range
-#   during the indexing of triangle
+#   This section will "sum" the pyramid and make the max-paths representation
+#   the problem is that this does not correspond to the actual values - and a
+#   method to find the index of a given array from the max of the modified array
+#   and use the value in the original spot from the original array.
 #
-#   Reducing the range by 1 on both loops still has it going out of range!?
+#   Its very confusing.
 #
-#       max_list = triangle[row][x] + max(max_list[x], max_list[x+1]) # goes out of range?
-#
-#   max_list is not an array!?
+    new.append(origin[0])
+    for row in range(1, len(origin)-1):
+        new.append([i+j for i,j in zip(sumrow(origin[row-1]) ,origin[row])])
+    
+    new.append(origin[-1])
 
-    for row in range(len(triangle)):
-        for x in range(len(triangle[row])-1):            
-            max_list = triangle[row][x] + max(triangle[row][x], triangle[row][x+1]) # goes out of range?
+    return new
 
-    return max_lis
+def proj18():
+    a = []
+    a = get_pyramid('18list')
+
+    b = sum_pyramid(a)
+    b.reverse()
+    print b
+    score = 0
+
+    for row in range(len(b)):
+        score += max(b[row])
+
+    return score
