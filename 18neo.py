@@ -1,3 +1,7 @@
+#   Test Values
+
+list = [[11,7,5,8],[3,6,9],[14,10],[1]]
+
 #   Load the pyramid from a text file
 def get_pyramid(filename):
     
@@ -9,6 +13,15 @@ def get_pyramid(filename):
     string_list.reverse()
     return [[int(x) for x in row.split()] \
         for row in string_list]
+
+#   Pair the numbers off in an array
+def pairs(list):
+    i = iter(list)
+    first = prev = i.next()
+    for item in i:
+        yield prev, item
+        prev = item
+#    yield item, first
 
 #   Sum the numbers in pairs
 def sumrow(row):
