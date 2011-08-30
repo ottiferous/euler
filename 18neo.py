@@ -38,29 +38,15 @@ def sum_pyramid(origin):
     
     new = []
 
-    new.append(origin[0])
-    for row in range(1, len(origin)-1):
-        new.append([i+j for i,j in zip(sumrow(origin[row-1]) ,origin[row])])
-    
-    new.append(origin[-1])
-
+    hold = []
     for row in origin:
 
-#
-#   This works - but it needs to have a way to 'break' out of execution between each main loop
-#   otherwise you get a single, long array.
-#
-#
-#for row in list:
-#     print row
-#     for each in pairs(row):
-#             new.append(max(each))
-
-    for row in origin:
+        new.append(map(lambda x,y: x+y, hold, row))
         hold = []
         for each in pairs(row):
             hold.append(max(each))
-        new.append(hold)
+        print hold
+        print row
 
     return new
 
