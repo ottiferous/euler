@@ -21,7 +21,6 @@ def pairs(list):
     for item in i:
         yield prev, item
         prev = item
-#    yield item, first
 
 #   Sum the numbers in pairs
 def sumrow(row):
@@ -39,19 +38,29 @@ def sum_pyramid(origin):
     
     new = []
 
-#
-#   This section will "sum" the pyramid and make the max-paths representation
-#   the problem is that this does not correspond to the actual values - and a
-#   method to find the index of a given array from the max of the modified array
-#   and use the value in the original spot from the original array.
-#
-#   Its very confusing.
-#
     new.append(origin[0])
     for row in range(1, len(origin)-1):
         new.append([i+j for i,j in zip(sumrow(origin[row-1]) ,origin[row])])
     
     new.append(origin[-1])
+
+    for row in origin:
+
+#
+#   This works - but it needs to have a way to 'break' out of execution between each main loop
+#   otherwise you get a single, long array.
+#
+#
+#for row in list:
+#     print row
+#     for each in pairs(row):
+#             new.append(max(each))
+
+    for row in origin:
+        hold = []
+        for each in pairs(row):
+            hold.append(max(each))
+        new.append(hold)
 
     return new
 
