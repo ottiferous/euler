@@ -22,39 +22,29 @@ def pairs(list):
         yield prev, item
         prev = item
 
-#   Sum the numbers in pairs
-def sumrow(row):
-
-    if(len(row) == 1): return row
-
-    result = []
-    for x in range(len(row)-1):
-        result.append(row[x] + row[x+1])
-    return result
-
 # Make the summation triangle
 #   gets an upside-down pyramid
-def sum_pyramid(origin):
+def reducerows(start):
     
-    new = []
+    result = []
+    for row in range(len(start)-1):
 
-    hold = []
-    for row in origin:
-
-        new.append(map(lambda x,y: x+y, hold, row))
         hold = []
-        for each in pairs(row):
+        for each in pairs(start[row]):
             hold.append(max(each))
-        print hold
-        print row
 
-    return new
+        print hold
+        print start[row]
+#       Not the same size when this is called....
+        start[row] = map(lambda x,y: x+y, hold, start[row+1])
+
+    return start
 
 def proj18():
     a = []
     a = get_pyramid('18list')
 
-    b = sum_pyramid(a)
+    b = sum_row(a)
     b.reverse()
     print b
     score = 0
