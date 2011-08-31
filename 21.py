@@ -13,7 +13,7 @@ def prob21(ceiling):
             result += num
 
     print "Elapsed time: " + str((time() - start)/100)
-    return a
+    return result
 
 
 print prob21(10000)
