@@ -12,7 +12,7 @@ def prob21(ceiling):
         if num == (sum(divisors(a))-a) and (num != a):
             result += num
 
-    print "Elapsed time: " + str((time() - start)*100)
+    print "Elapsed time: " + str((time() - start)*1000)
     return result
 
 

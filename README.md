@@ -27,5 +27,5 @@ Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
 - *16*  Elapsed time: *0.78821182251*
 
 
-- *21*  Elapsed time: *66.0820960*
+- *21*  Elapsed time: *660.820960*
 - *25*  Elapsed time: *143.081903458*
