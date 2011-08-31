@@ -6,13 +6,13 @@ def prob21(ceiling):
     
     result = 0
 
-    for num in range(1, ceiling+1):
+    for num in range(2, ceiling):
 
         a = sum(divisors(num))-num
-        if num == (sum(divisors(a))-a):
+        if num == (sum(divisors(a))-a) and (num != a):
             result += num
 
-    print "Elapsed time: " + str((time() - start)/100)
+    print "Elapsed time: " + str((time() - start)*100)
     return result
 
 

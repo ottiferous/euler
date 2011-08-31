@@ -19,12 +19,13 @@ Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
 
 > ### TOTAL -- 43.083 _seconds_
 
-- *11*  Elapsed time: *0.00707697868347*
-- *12*  Elapsed time: *11.5731098652*
-- *13*  Elapsed time: *0.00247097015381*
-- *14*  Elapsed time: *12.7327511311*
-- *15*  Elapsed time: *0.000643968582153*
-- *16*  Elapsed time: *0.00078821182251*
+- *11*  Elapsed time: *7.07697868347*
+- *12*  Elapsed time: *11573.1098652*
+- *13*  Elapsed time: *2.47097015381*
+- *14*  Elapsed time: *12732.7511311*
+- *15*  Elapsed time: *0.643968582153*
+- *16*  Elapsed time: *0.78821182251*
 
 
-- *25*  Elapsed time: *0.143081903458*
+- *21*  Elapsed time: *66.0820960*
+- *25*  Elapsed time: *143.081903458*
