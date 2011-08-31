@@ -1,4 +1,5 @@
 #   Test Values
+from time import time
 
 list = [[11,7,5,8],[3,6,9],[14,10],[1]]
 
@@ -16,11 +17,20 @@ def get_pyramid(filename):
 
 #   Pair the numbers off in an array
 def pairs(list):
+
     i = iter(list)
     first = prev = i.next()
     for item in i:
         yield prev, item
         prev = item
+#   Function to reduce an array by 1
+#   returns the reduced array
+def reduce(row):
+
+    hold = []
+    for each in pairs(row):
+        hold.append(max(each))
+    return hold
 
 # Make the summation triangle
 #   gets an upside-down pyramid
@@ -29,27 +39,17 @@ def reducerows(start):
     result = []
     for row in range(len(start)-1):
 
-        hold = []
-        for each in pairs(start[row]):
-            hold.append(max(each))
+        start[row] = reduce(start[row])
+        start[row+1] = map(lambda x,y: x+y, start[row], start[row+1])
+        print start[row]    
 
-        print hold
-        print start[row]
-#       Not the same size when this is called....
-        start[row] = map(lambda x,y: x+y, hold, start[row+1])
-
-    return start
+    return start[-1]
 
 def proj18():
-    a = []
+
+    start = time()
     a = get_pyramid('18list')
+    print a
+    print reducerows(a)
+    print "Elapsed time: " + str((time() - start)*1000)
 
-    b = sum_row(a)
-    b.reverse()
-    print b
-    score = 0
-
-    for row in range(len(b)):
-        score += max(b[row])
-
-    return score
