@@ -3,6 +3,7 @@
 #
 #   If all the numbers from 1 to 1000 (one thousand) inclusive 
 #   were written out in words, how many letters would be used?
+from time import time
 
 numdict = {
     0   :   "",
@@ -27,7 +28,7 @@ numdict = {
     19  :   "nineteen",
     20  :   "twenty",
     30  :   "thirty",
-    40  :   "fourty",
+    40  :   "forty",
     50  :   "fifty",
     60  :   "sixty",
     70  :   "seventy",
@@ -39,17 +40,21 @@ numdict = {
 
 #   find the letters of a given number
 def lettersof(number):
-    
+
     if number < 21:
         return len(numdict[number])
-    
+    if number == 1000:
+        return len(numdict[number]) + len("one")
     i = word = 0
-    
 
+    #i = int(number/1000)
+    #if i > 0:
+        #word += len(numdict[i]) + len(numdict[1000])
+    #number -= i*1000
+    
     i = int(number/100)
     if i > 0:
-        word += len(numdict[i]) + len(numdict[100])
-
+        word += len(numdict[i]) + len(numdict[100]) + len("and")
     number -= i*100
     
     i = int(number/10)
@@ -60,12 +65,14 @@ def lettersof(number):
     word += len(numdict[number])
 
     return word
-        
 
 #   Now begins the actual code
-def proj17():
 
-    count = 0
-    for num in range(1, 10001):
-        count += lettersof(num)
-    return count
+start = time()
+
+count = 0
+for num in range(1, 1001):
+    count += lettersof(num)
+
+print count
+print "Elapsed time: " + str((time() - start)*1000)
