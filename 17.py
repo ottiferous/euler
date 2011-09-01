@@ -54,7 +54,9 @@ def lettersof(number):
     
     i = int(number/100)
     if i > 0:
-        word += len(numdict[i]) + len(numdict[100]) + len("and")
+        if number % 100 == 0:
+            word += len(numdict[i]) + len(numdict[100])
+        else: word += len(numdict[i]) + len(numdict[100]) + len("and")
     number -= i*100
     
     i = int(number/10)
@@ -67,6 +69,12 @@ def lettersof(number):
     return word
 
 #   Now begins the actual code
+
+def test(start, end):
+    count = 0
+    for num in range(start, end):
+        count += lettersof(num)
+    return count
 
 start = time()
 
