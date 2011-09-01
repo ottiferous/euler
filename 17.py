@@ -41,17 +41,10 @@ numdict = {
 #   find the letters of a given number
 def lettersof(number):
 
-    if number < 21:
-        return len(numdict[number])
     if number == 1000:
         return len(numdict[number]) + len("one")
     i = word = 0
 
-    #i = int(number/1000)
-    #if i > 0:
-        #word += len(numdict[i]) + len(numdict[1000])
-    #number -= i*1000
-    
     i = int(number/100)
     if i > 0:
         if number % 100 == 0:
@@ -59,11 +52,12 @@ def lettersof(number):
         else: word += len(numdict[i]) + len(numdict[100]) + len("and")
     number -= i*100
     
+    if number < 20:
+        return word + len(numdict[number])
     i = int(number/10)
     if i > 0:
         word += len(numdict[i*10])
     number -= i*10
-
     word += len(numdict[number])
 
     return word
