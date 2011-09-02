@@ -21,10 +21,13 @@ def scoreof(name):
 #   Solve the Problem
 def proj22():
     
+    start = time()
     list = getnames()
     list.sort()
-    points = 0
 
+    points = 0
     for item in range(len(list)):
-        points += (scoreof(list[item]) * item)
+        points += (scoreof(list[item]) * (item+1))
+
+    print "Elapsed time: " + str((time() - start)*1000)
     return points
