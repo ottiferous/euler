@@ -1,6 +1,4 @@
 import core
-start = core.time()
-
 
 a = core.primelist(range(0,int((600851475143**0.5)+1)))
 a.reverse()
@@ -11,4 +9,3 @@ for num in a:
         break
     
 print "Largest Prime Factor is: " + str(result)
-print "Elapsed time " + str(core.time()-start) + " seconds"

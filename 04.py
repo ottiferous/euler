@@ -1,6 +1,5 @@
 import core
 
-start = core.time()
 count = 999*999
 plist = []
 
@@ -16,9 +15,7 @@ for i in plist:
 	
     for x in llist:
         if ((i % x) == 0) and (len(str(i/x))==3):
-			print "Solution set (" + str(x) + "," + str(i/x) + ") for " + str(i)
 			break	
 	
     if ((i % x) == 0) and (len(str(i/x))==3):
         break
-print "Elapsed time: " + str(core.time() - start)

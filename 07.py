@@ -1,5 +1,3 @@
-from time import time
-start = time()
 def isprime(n):
 	n = abs(int(n))
 	if n < 2:
@@ -24,6 +22,3 @@ def primelist(n):
 
 
 list = primelist(10001)
-
-print list[-1]
-print "Elapsed time is: " + str(time() - start)

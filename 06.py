@@ -1,6 +1,3 @@
-from time import time
-
-start = time()
 sumofsquare = 0
 squareofsum = 0
 
@@ -12,6 +9,3 @@ for _ in range(100):
 	count += 1
 	
 squareofsum = squareofsum**2
-
-print "Result is: " + str(squareofsum-sumofsquare)
-print "Elapsed time: " + str(time() - start)
