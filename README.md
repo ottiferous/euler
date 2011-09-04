@@ -3,7 +3,10 @@ Solved Problems Runtime
 
 Times listed for individual programs are in **milliseconds**, while **Totals are in seconds**.
 
+All benchmarks are derived from the built-in _profile_ method on the same machine as [Zolrath](https://github.com/zolrath/Project-Clojuler) using the command _python -m profile <filename>_
+
 Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
+
 =========================
 
 - *01*  Elapsed time: *0.356912612915*
