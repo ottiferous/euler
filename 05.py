@@ -1,7 +1,5 @@
-from math import factorial
-
 seed = 19*17*13*11
-test = factorial(20)
+test = reduce(int.__mul__, xrange(1, 21), 1)
 count = 1
 
 while seed < test:

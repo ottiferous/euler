@@ -3,7 +3,8 @@ Solved Problems Runtime
 
 Times listed for individual programs are in **milliseconds**, while **Totals are in seconds**.
 
-All benchmarks are derived from the built-in _profile_ method on the same machine as [Zolrath](https://github.com/zolrath/Project-Clojuler) using the command </br>
+All benchmarks are derived from the built-in _profile_ method on the same machine as [Zolrath](https://github.com/zolrath/Project-Clojuler) using the command:
+
 <code>python -m profile $filename</code>
 
 Competing with [Zolrath](https://github.com/zolrath/Project-Clojuler)
