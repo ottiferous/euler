@@ -1,12 +1,7 @@
-from math import factorial
-from time import time
-start = time()
-
 grid = 20
-n = grid*2
-r = grid
+n = int(grid*2)
+r = int(grid)
 
-result = ((factorial(n))/(factorial(r)*(factorial(n-r))))
+result = (reduce(lambda x,y: x*y, xrange(1, 40), 1))/(reduce(lambda x,y: x*y, xrange(1, 20), 1)*(reduce(lambda x,y: x*y, xrange(1, 20), 1)))
 
 print result
-print "Elapsed time: " + str(time() - start)
