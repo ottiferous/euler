@@ -1,5 +1,4 @@
 import core
-start = core.time()
 
 print "Finding the sum of all primes between 0 and 2.000.000"
 
@@ -11,4 +10,3 @@ for _ in list:
 	hold += _	
 
 print "Summation is: " + str(hold)
-print "Elapsed time: " + str(core.time() - start) + " seconds"
