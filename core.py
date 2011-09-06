@@ -9,7 +9,6 @@ def deltatime():
 
 #   Checks if arguent is prime  
 def isprime(n):
-    n = abs(int(n))
     if n < 2:
         return False
     if n == 2: 
