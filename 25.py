@@ -1,5 +1,4 @@
 import core
-start = core.time()
 
 result = "test"
 count = 0
@@ -11,4 +10,3 @@ for x in num:
     count += 1
 
 print count
-print "Elapsed time: " + str(core.time() - start)

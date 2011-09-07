@@ -1,6 +1,6 @@
-import core
+from core import primelist
 
-a = core.primelist(range(0,int((600851475143**0.5)+1)))
+a = primelist(range(0,int((600851475143**0.5)+1)))
 a.reverse()
 
 for num in a:
