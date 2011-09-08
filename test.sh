@@ -19,5 +19,7 @@ do
 	line=`python -m profile $each | grep CPU`
 	line=$(echo "$line" | cut -d " " -f 14)
 	echo -e "*$line*"
+	if [ `$each % 10` -eq 0 ]; then
+		echo ""
+	fi 
 done
-echo "     =====     END LOG     =====     "
