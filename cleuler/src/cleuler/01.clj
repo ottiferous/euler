@@ -1,12 +1,6 @@
 (ns cleuler.01
-	:use [cleuler.core])
+	(:use [cleuler.core]))
 
-(defn three?[x]
-	(zero? (mod x 3))
+(reduce + (filter #(or (zero? (mod % 3))(zero? (mod % 5))) (range 1 1000)))
 
-(defn five?[x]
-	(zero? (mod x 5))
-
-
-
-
+(println "Haha dogs look funny in hats")
