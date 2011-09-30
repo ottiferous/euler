@@ -1,8 +1,5 @@
 import calendar
 
-year = 1901
-month = 01
-
 count = 0
 
 for year in xrange(1901, 2001):
