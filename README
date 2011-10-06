@@ -1,13 +1,10 @@
-# euler
+Project Euler
 
-FIXME: write description
 
-## Usage
+Written with:
+  Python
+  Clojure
 
-FIXME: write
+---
 
-## License
-
-Copyright (C) 2011 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+An attempt at learnign language, solving math problems, and hopefully extending world hunger.
