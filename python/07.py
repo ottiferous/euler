@@ -1,24 +1,19 @@
-def isprime(n):
-	n = abs(int(n))
-	if n < 2:
-		return False
-	if n == 2:
-		return True
-	if not n & 1:
-		return False
-	for x in range(3, int(n**0.5)+1, 2):
-		if n % x == 0:
-			return False
-	return True
-
-def primelist(n):
-	i = 0
-	a = []
-	while len(a) < n:
-		if isprime(i):
-			a.append(i)
-		i += 1
-	return a
+import re
 
 
-list = primelist(10001)
+def isPrime(n):
+    m = re.match( r'^1?$|^(11+?)\1+$', '1'*n) # matches if not prime
+    if m:
+        return False
+    else:
+        return True
+
+count = 1
+primeList = []
+
+while(len(primeList) < 1001):
+    if isPrime(count):
+        primeList.append(count)
+    count += 1
+
+print primeList[1000] # 1001st prime number
